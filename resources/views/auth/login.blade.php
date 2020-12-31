@@ -82,13 +82,5 @@
     <script src="{{ asset('assets/js/pace.min.js') }}"></script>
     <script src="{{ asset('assets/js/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('assets/js/coreui.min.js') }}"></script>
-    <script src="{{ asset('assets/js/Pnotify.js') }}"></script>
-    <script src="{{ asset('assets/js/PnotifyButtons.js') }}"></script>
-    <script src="{{ asset('assets/js/PnotifyConfirm.js') }}"></script>
-    <script src="{{ asset('assets/js/PnotifyMobile.js') }}"></script>
-    <script src="{{ asset('assets/js/PnotifyNonBlock.js') }}"></script>
-    <script>
-      PNotify.defaults.styling = 'bootstrap4';
-    </script>
   </body>
 </html>

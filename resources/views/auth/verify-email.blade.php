@@ -1,39 +1,77 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<!--
+* Backstrap - Free Bootstrap Admin Template
+* @version v0.2.0
+* @link https://backstrap.net
+* Copyright (c) 2018 Cristian Tabacitu
+* Licensed under MIT (https://coreui.io/license)
+-->
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-        </div>
-
-        @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-            </div>
-        @endif
-
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
-                @csrf
-
-                <div>
-                    <x-button>
-                        {{ __('Resend Verification Email') }}
-                    </x-button>
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Backoffice - {{ config('app.name', 'Laravel') }}</title>
+    <!-- Icons-->
+    <link href="{{ asset('assets/css/coreui-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/simple-line-icons.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="{{ asset('assets/css/backStrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet">
+  </head>
+  <body class="app flex-row align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <p class="text-muted">{{ __('messages.VerifyYourEmail') }}</p>
+                @if (session('status') == 'verification-link-sent')
+                <div class="alert alert-success">
+                    {{ __('messages.NewVerificationLink') }}
                 </div>
-            </form>
+                @endif
+                  
+                <div class="row">
+                  <div class="col-12">
+                    <form method="POST" action="{{ route('verification.send') }}">
+                        @csrf
 
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
+                        <div>
+                            <button class="btn btn-primary px-4" type="submit">{{ __('messages.ResendVerificationEmail') }}</button>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="col-12 text-right">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
 
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    {{ __('Logout') }}
-                </button>
-            </form>
+                        <button class="btn btn-link px-0" type="submit">
+                            {{ __('Logout') }}
+                        </button>
+                    </form>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+          </div>
         </div>
-    </x-auth-card>
-</x-guest-layout>
+      </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="{{ asset('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/pace.min.js') }}"></script>
+    <script src="{{ asset('assets/js/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/coreui.min.js') }}"></script>
+  </body>
+</html>
