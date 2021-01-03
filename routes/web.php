@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('profile', [UserController::class, 'profile'])->middleware(['auth'])->name('profile');
+
 
 require __DIR__.'/auth.php';
