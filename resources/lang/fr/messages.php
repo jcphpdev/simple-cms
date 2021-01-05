@@ -22,6 +22,9 @@ return [
     
     
     'Dashboard' => 'Tableau de bord',
+    
+    'Profile' => 'Mettre à jour l\'image de profil',
+    'UpdateProfileImage' => 'Mettre à jour l\'image de profil',
 
     
     

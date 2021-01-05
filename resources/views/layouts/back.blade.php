@@ -33,7 +33,7 @@
         <li class="nav-item dropdown">
           @auth
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+            <img class="img-avatar" src="uploads/avatars/{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}">
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center"><strong>Account</strong></div>

@@ -63,8 +63,8 @@
                     @endif
                   </div>
                   <div class="row">
-                    <div class="col-6">
-                      <button class="btn btn-primary px-4" type="submit">{{ __('messages.ResetPassword') }}</button>
+                    <div class="col-12">
+                      <button class="btn btn-primary btn-block px-4" type="submit">{{ __('messages.ResetPassword') }}</button>
                     </div>
                   </div>
                 </form>
