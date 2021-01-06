@@ -9,8 +9,8 @@ Route::get('/users/profile', [UserController::class, 'profile'])
                 ->middleware(['auth'])
                 ->name('profile');
 
-Route::post('/users/profile', [UserController::class, 'update'])
+Route::post('/users/profile', [UserController::class, 'update_avatar'])
                 ->middleware(['auth'])
-                ->name('profile.update');
+                ->name('profile.update_avatar');
 
 

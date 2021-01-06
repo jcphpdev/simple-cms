@@ -10,11 +10,18 @@
 				<div class="card">
 						<div class="card-header"><i class="far fa-id-badge"></i> {{ $user->name }}</div>
 						<div class="card-body">
+						
+								@if ($message = Session::get('success'))
+										<div class="alert alert-success alert-block">
+												<button type="button" class="close" data-dismiss="alert">×</button>
+												<strong>{{ $message }}</strong>
+										</div>
+								@endif
 							
 								<div class="row">
 										<div class="text-center">
-												<img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; border-radius:50%; margin-right:25px;">
-												<form enctype="multipart/form-data" action="{{ route('profile.update') }}" method="POST">
+												<img src="/storage/avatars/{{ $user->avatar }}" style="width:150px; height:150px; border-radius:50%; margin-right:25px;">
+												<form enctype="multipart/form-data" action="{{ route('profile.update_avatar') }}" method="POST">
 														<label>{{ __('messages.UpdateProfileImage') }}</label>
 														<div class="custom-file mb-3">
 															<input type="file" name="avatar" class="custom-file-input" id="validatedCustomFile" required>
@@ -26,6 +33,7 @@
 												</form>
 										</div>
 								</div>
+								
 							
 						</div>
 				</div>
