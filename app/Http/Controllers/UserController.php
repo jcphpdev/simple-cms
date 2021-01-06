@@ -21,15 +21,15 @@ class UserController extends Controller
 
         $user = Auth::user();
 
-        $avatarName = $user->id.'_avatar'.time().'.'.request()->avatar->getClientOriginalExtension();
+        $avatarName = $user->id . '_avatar' . time() . '.' . request()->avatar->getClientOriginalExtension();
 
-        $request->avatar->storeAs('avatars',$avatarName);
+        $request->avatar->storeAs('public/avatars', $avatarName);
 
         $user->avatar = $avatarName;
         $user->save();
 
         return back()
-            ->with('success','You have successfully upload image.');
+            ->with('success', 'You have successfully upload image.');
 
     }
 }

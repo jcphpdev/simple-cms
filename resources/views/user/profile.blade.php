@@ -25,8 +25,10 @@
 														<label>{{ __('messages.UpdateProfileImage') }}</label>
 														<div class="custom-file mb-3">
 															<input type="file" name="avatar" class="custom-file-input" id="validatedCustomFile" required>
-															<label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-															<div class="invalid-feedback">Example invalid custom file feedback</div>
+															<label class="custom-file-label" for="validatedCustomFile">{{ __('messages.ChooseFile') }}</label>
+                              @if ($errors->has('avatar'))
+                              <div class="invalid-feedback">{{ $errors->first('avatar') }}</div>
+                              @endif
 														</div>
 														<input type="hidden" name="_token" value="{{ csrf_token() }}">
 														<input type="submit" class="btn btn-sm btn-primary btn-block">
@@ -40,10 +42,25 @@
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-8">
 				<div class="card">
-						<div class="card-header"><i class="far fa-address-card"></i> {{ __('messages.Profile') }}</div>
+						<div class="card-header"><i class="far fa-address-card"></i> {{ $user->name }} {{ __('messages.Profile') }}</div>
 						<div class="card-body">
 							
-								
+								<table class="table table-responsive-sm table-striped">
+                  <tbody>
+                    <tr>
+                      <th class="w-25">Nom :</th>
+                      <td>{{ $user->name }}</td>
+                    </tr>
+                    <tr>
+                      <th>Adresse électronique :</th>
+                      <td>{{ $user->email }}</td>
+                    </tr>
+                    <tr>
+                      <th>Date d'inscription :</th>
+                      <td>{{ $user->created_at }}</td>
+                    </tr>
+                  </tbody>
+                </table>
 							
 						</div>
 				</div>

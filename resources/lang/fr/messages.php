@@ -6,6 +6,7 @@ return [
     'SignInAccount' => 'Connectez-vous à votre compte',
     'Name' => 'Nom',
     'Email' => 'Adresse email',
+    'Username' => 'Nom d\'utilisateur',
     'Password' => 'Mot de passe',
     'PasswordConfirmation' => 'Confirmation du mot de passe',
     'PasswordConfirmationMessage' => 'Il s\'agit d\'une zone sécurisée de l\'application. Veuillez confirmer votre mot de passe avant de continuer.',
@@ -23,8 +24,9 @@ return [
     
     'Dashboard' => 'Tableau de bord',
     
-    'Profile' => 'Mettre à jour l\'image de profil',
+    'Profile' => 'Profil',
     'UpdateProfileImage' => 'Mettre à jour l\'image de profil',
+    'ChooseFile' => 'Choisir le fichier...',
 
     
     

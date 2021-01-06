@@ -43,9 +43,9 @@
                   @csrf
                   <div class="input-group mb-3">
                     <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
-                    <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Email') }}" id="email" name="email" vlaue="{{ old('email') }}">
-                    @if ($errors->has('email'))
-                    <div class="invalid-feedback">{{ $errors->first('email') }}</div>
+                    <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Username') }}" id="username" name="username" vlaue="{{ old('username') }}">
+                    @if ($errors->has('username'))
+                    <div class="invalid-feedback">{{ $errors->first('username') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-4">
