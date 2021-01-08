@@ -7,6 +7,7 @@ return [
     'Name' => 'Nom',
     'Email' => 'Adresse email',
     'Username' => 'Nom d\'utilisateur',
+    'InscriptionDate' => 'Date d\'inscription',
     'Password' => 'Mot de passe',
     'PasswordConfirmation' => 'Confirmation du mot de passe',
     'PasswordConfirmationMessage' => 'Il s\'agit d\'une zone sécurisée de l\'application. Veuillez confirmer votre mot de passe avant de continuer.',
@@ -28,6 +29,14 @@ return [
     'UpdateProfileImage' => 'Mettre à jour l\'image de profil',
     'ChooseFile' => 'Choisir le fichier...',
 
+    'UserList' => 'Liste des utilisateurs',
+    'UserCreate' => 'Ajouter un utilisateur',
+    'UserEdit' => 'Modifier un utilisateur',
+    
+    'Show' => 'Afficher',
+    'Edit' => 'Modifier',
+    'Delete' => 'Supprimer',
+    'Submit' => 'Envoyer',
     
     
 ];

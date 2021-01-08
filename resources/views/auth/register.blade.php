@@ -40,35 +40,35 @@
                 <form method="POST" action="{{ route('register') }}">
                   @csrf
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
                     <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Username') }}" id="username" name="username" value="{{ old('username') }}">
                     @if ($errors->has('username'))
                     <div class="invalid-feedback">{{ $errors->first('username') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
                     <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Name') }}" id="name" name="name" value="{{ old('name') }}">
                     @if ($errors->has('name'))
                     <div class="invalid-feedback">{{ $errors->first('name') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-at"></i></span></div>
                     <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Email') }}" id="email" name="email" value="{{ old('email') }}">
                     @if ($errors->has('email'))
                     <div class="invalid-feedback">{{ $errors->first('email') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-4">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-lock"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-unlock-alt"></i></span></div>
                     <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="{{ __('messages.Password') }}" id="password" name="password">
                     @if ($errors->has('password'))
                     <div class="invalid-feedback">{{ $errors->first('password') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-4">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-lock"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-unlock-alt"></i></span></div>
                     <input class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" type="password" placeholder="{{ __('messages.PasswordConfirmation') }}" id="password_confirmation" name="password_confirmation">
                     @if ($errors->has('password_confirmation'))
                     <div class="invalid-feedback">{{ $errors->first('password_confirmation') }}</div>

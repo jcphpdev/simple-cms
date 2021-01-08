@@ -42,7 +42,7 @@
                 <form method="POST" action="{{ route('password.email') }}">
                   @csrf
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-at"></i></span></div>
                     <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Email') }}" id="email" name="email" value="{{ old('email') }}">
                     @if ($errors->has('email'))
                     <div class="invalid-feedback">{{ $errors->first('email') }}</div>

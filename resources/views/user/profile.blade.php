@@ -48,15 +48,19 @@
 								<table class="table table-responsive-sm table-striped">
                   <tbody>
                     <tr>
-                      <th class="w-25">Nom :</th>
+                      <th class="w-25">{{ __('messages.Name') }} :</th>
                       <td>{{ $user->name }}</td>
                     </tr>
                     <tr>
-                      <th>Adresse électronique :</th>
+                      <th>{{ __('messages.Email') }} :</th>
                       <td>{{ $user->email }}</td>
                     </tr>
                     <tr>
-                      <th>Date d'inscription :</th>
+                      <th>{{ __('messages.Username') }} :</th>
+                      <td>{{ $user->username }}</td>
+                    </tr>
+                    <tr>
+                      <th>{{ __('messages.InscriptionDate') }} :</th>
                       <td>{{ $user->created_at }}</td>
                     </tr>
                   </tbody>

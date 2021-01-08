@@ -42,14 +42,14 @@
                 <form method="POST" action="{{ route('login') }}">
                   @csrf
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-user"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div>
                     <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" placeholder="{{ __('messages.Username') }}" id="username" name="username" vlaue="{{ old('username') }}">
                     @if ($errors->has('username'))
                     <div class="invalid-feedback">{{ $errors->first('username') }}</div>
                     @endif
                   </div>
                   <div class="input-group mb-4">
-                    <div class="input-group-prepend"><span class="input-group-text"><i class="icon-lock"></i></span></div>
+                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-unlock-alt"></i></span></div>
                     <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" placeholder="{{ __('messages.Password') }}" id="password" name="password">
                     @if ($errors->has('password'))
                     <div class="invalid-feedback">{{ $errors->first('password') }}</div>
